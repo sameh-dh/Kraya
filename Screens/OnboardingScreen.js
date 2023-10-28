@@ -1,13 +1,13 @@
 import React from "react";
 import {View , Text , Button , StyleSheet} from 'react-native';
 
-const LoginScreen = () => {
+const OnboardingScreen = ({navigation}) => {
     return (
-        <View style= {StyleSheet.container} >
-            <Text>Login Screen </Text>
+        <View style= {styles.container} >
+            <Text>OnboardingScreen </Text>
             <Button 
             title= "Click Here"
-            onPress= {() => alert('Button clicked')}
+            onPress= {() => navigation.navigate("Login")}
             />
         </View>
 
@@ -15,7 +15,7 @@ const LoginScreen = () => {
     );
 };
 
-export default LoginScreen ; 
+export default OnboardingScreen ; 
 
 const styles = StyleSheet.create({
     container : {
