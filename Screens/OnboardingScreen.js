@@ -1,16 +1,25 @@
 import React from "react";
-import {View , Text , Button , StyleSheet} from 'react-native';
+import {View , Text , Button ,Image,  StyleSheet} from 'react-native';
+import Onboarding from  'react-native-onboarding-swiper' ;
 
 const OnboardingScreen = ({navigation}) => {
     return (
-        <View style= {styles.container} >
-            <Text>OnboardingScreen </Text>
-            <Button 
-            title= "Click Here"
-            onPress= {() => navigation.navigate("Login")}
-            />
-        </View>
-
+        <Onboarding 
+        pages={[
+            { 
+                backgroundColor : '#fff',
+                image : <Image source={require('../assets/onboarding-img1.png')} />,
+                title : 'Welcome to krayti',
+                subtitle: 'swipe to start'
+            },
+            { 
+                backgroundColor : '#fff',
+                image : <Image source={require('../assets/onboarding-img2.png')} />,
+                title : 'Onboarding',
+                subtitle: 'hola'
+            }
+        ]}
+        />
 
     );
 };
