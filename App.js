@@ -5,13 +5,14 @@ import AsyncStorage from "@react-native-community/async-storage";
 import OnboardingScreen from "./Screens/OnboardingScreen"
 import LoginScreen from "./Screens/LoginScreen"
 import SignupScreen from "./Screens/SignUpScreen"
-
+import HomeScreen from "./Screens/HomeScreen"
 const AppStack = createStackNavigator();
+
 export default function App() {
   const [isFirstLaunch , setIsFirstLaunch] = React.useState(null);
 
   useEffect(() => {
-    AsyncStorage.getItem('alreadyLauched').then(value => {
+    AsyncStorage.getItem('alreadyLaunched').then(value => {
       if(value == null) {
         AsyncStorage.setItem('alreadyLaunched',true);
         setIsFirstLaunch(true)
@@ -32,6 +33,7 @@ export default function App() {
     <AppStack.Screen name="Onboarding" component={OnboardingScreen} />
     <AppStack.Screen name="Login" component={LoginScreen} />
     <AppStack.Screen name="signup" component={SignupScreen} />
+    <AppStack.Screen name="Home" component={HomeScreen} />
     </AppStack.Navigator>
    </NavigationContainer>
     )

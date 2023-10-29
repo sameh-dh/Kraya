@@ -79,7 +79,7 @@ const SignupScreen = ({navigation}) => {
         </View> 
         
         <TouchableOpacity style={styles.loginBtn}>
-          <Text style={styles.loginText} onPress={() => navigation.navigate("signup")}>SignUp</Text> 
+          <Text style={styles.loginText} onPress={() => navigation.navigate("Home")}>SignUp</Text> 
         </TouchableOpacity> 
         <TouchableOpacity>
           <Text style={styles.forgot_button} onPress={() => navigation.navigate("Login")}> Log In </Text> 
@@ -93,7 +93,7 @@ const SignupScreen = ({navigation}) => {
   const styles = StyleSheet.create({
     container: {
       flex: 1,
-      backgroundColor: "#EFF0F4",
+      backgroundColor: "#f9f4e9",
       alignItems: "center",
       justifyContent: "center",
     },

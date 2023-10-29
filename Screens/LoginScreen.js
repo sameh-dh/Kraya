@@ -40,7 +40,7 @@ const LoginScreen = ({navigation}) => {
           <Text style={styles.forgot_button}>Forgot Password?</Text> 
         </TouchableOpacity> 
         <TouchableOpacity style={styles.loginBtn}>
-          <Text style={styles.loginText} onPress={() => navigation.navigate("signup")}>LOGIN</Text> 
+          <Text style={styles.loginText} onPress={() => navigation.navigate("Home")}>LOGIN</Text> 
         </TouchableOpacity> 
         <TouchableOpacity>
           <Text style={styles.forgot_button} onPress={() => navigation.navigate("signup")}> SignUp </Text> 
@@ -51,7 +51,7 @@ const LoginScreen = ({navigation}) => {
   const styles = StyleSheet.create({
     container: {
       flex: 1,
-      backgroundColor: "#EFF0F4",
+      backgroundColor: "#f9f4e9",
       alignItems: "center",
       justifyContent: "center",
     },
