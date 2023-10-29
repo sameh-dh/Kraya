@@ -87,7 +87,7 @@ const LoginScreen = ({navigation}) => {
       height: 50,
       alignItems: "center",
       justifyContent: "center",
-      marginTop: 0,
+      marginTop: 0, 
       backgroundColor: "#213263",
     },
     loginText: {
