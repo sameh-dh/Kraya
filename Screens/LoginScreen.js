@@ -42,6 +42,9 @@ const LoginScreen = ({navigation}) => {
         <TouchableOpacity style={styles.loginBtn}>
           <Text style={styles.loginText} onPress={() => navigation.navigate("signup")}>LOGIN</Text> 
         </TouchableOpacity> 
+        <TouchableOpacity>
+          <Text style={styles.forgot_button} onPress={() => navigation.navigate("signup")}> SignUp </Text> 
+        </TouchableOpacity> 
       </View> 
     );
   }
@@ -88,6 +91,7 @@ const LoginScreen = ({navigation}) => {
       alignItems: "center",
       justifyContent: "center",
       marginTop: 0, 
+      marginBottom: 5, 
       backgroundColor: "#213263",
     },
     loginText: {

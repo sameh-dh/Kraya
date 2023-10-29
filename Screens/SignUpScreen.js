@@ -77,11 +77,12 @@ const SignupScreen = ({navigation}) => {
             onChangeText={(password) => setPassword(password)}
           /> 
         </View> 
-        <TouchableOpacity>
-          <Text style={styles.forgot_button}>Forgot Password?</Text> 
-        </TouchableOpacity> 
+        
         <TouchableOpacity style={styles.loginBtn}>
           <Text style={styles.loginText} onPress={() => navigation.navigate("signup")}>SignUp</Text> 
+        </TouchableOpacity> 
+        <TouchableOpacity>
+          <Text style={styles.forgot_button} onPress={() => navigation.navigate("Login")}> Log In </Text> 
         </TouchableOpacity> 
       </View> 
     
@@ -131,7 +132,8 @@ const SignupScreen = ({navigation}) => {
       height: 50,
       alignItems: "center",
       justifyContent: "center",
-      marginTop: 0, 
+      marginTop: 20, 
+      marginBottom: 5,
       backgroundColor: "#213263",
     },
     loginText: {
@@ -163,8 +165,6 @@ const SignupScreen = ({navigation}) => {
       marginBottom: 20,
       alignItems: "center",
       textAlign:"center",
-    
-
     }
     
   });
